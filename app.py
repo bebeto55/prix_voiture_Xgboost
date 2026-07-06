@@ -10,7 +10,7 @@ columns = joblib.load("columns.pkl")
 
 st.title("🚗 Car Price Prediction")
 
-levy = st.number_input("Levy", value=836)
+levy = st.slider("Levy", value=836)
 
 manufacturer = st.selectbox(
     "Manufacturer",
