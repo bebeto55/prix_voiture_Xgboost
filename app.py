@@ -10,7 +10,13 @@ columns = joblib.load("columns.pkl")
 
 st.title("🚗 Car Price Prediction")
 
-levy = st.slider("Levy", value=836)
+levy = st.text_input("Levy", value="836")
+
+try:
+    levy = float(levy)
+    st.write(f"Levy : {levy}")
+except ValueError:
+    st.error("Veuillez entrer un nombre valide.")
 
 manufacturer = st.selectbox(
     "Manufacturer",
