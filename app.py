@@ -14,7 +14,6 @@ levy = st.text_input("Levy", value="836")
 
 try:
     levy = float(levy)
-    st.write(f"Levy : {levy}")
 except ValueError:
     st.error("Veuillez entrer un nombre valide.")
 
